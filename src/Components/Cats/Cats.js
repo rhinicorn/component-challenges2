@@ -1,5 +1,6 @@
 import React from 'react';
-// import CatIndex from './CatIndex'
+import CatList from './CatList';
+import CatIndex from './CatIndex';
 import { Container } from 'reactstrap';
  
 const Cats = () => {
@@ -7,19 +8,23 @@ const Cats = () => {
      <Container className="App">
        <br/>
        <h1 className="App-intro">
-         To complete this challenge, complete and fix the existing code to have it do the following:
-       </h1>
+       List of ultra-fantastic cat breeds
+{
+/*          To complete this challenge, complete and fix the existing code to have it do the following:
+ */
+ }       </h1>
 
-       <hr />
-         
-        <ul>
+       <hr />         
+{/*         <ul>
          <li>Render the list of cat breeds to the screen</li>
          <li>Use props correctly</li>
          <li>Use .map() correctly</li>
          <li>Ensure there are no errors</li>
-        </ul>
+        </ul> */}
         <hr />
-       {/* <CatIndex /> */}
+        <div>
+          { <CatList /> }
+        </div>
      </Container>
    );
 
