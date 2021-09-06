@@ -1,6 +1,5 @@
 import React from 'react';
 import CatList from './CatList';
-import CatIndex from './CatIndex';
 import { Container } from 'reactstrap';
  
 const Cats = () => {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavItem from 'reactstrap/lib/NavItem';
 import CatIndex from './CatIndex';
 
 
