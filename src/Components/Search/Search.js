@@ -1,5 +1,5 @@
 import React from 'react';
-// import SearchIndex from './SearchIndex';
+import SearchIndex from './SearchIndex';
 import { Container } from 'reactstrap';
  
 const Search = () => {
@@ -22,7 +22,9 @@ const Search = () => {
          </li>
        </ul>
        <hr />
-       {/* <SearchIndex /> */}
+       <div>
+        { <SearchIndex /> }
+       </div>
      </Container>
    );
 

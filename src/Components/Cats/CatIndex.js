@@ -8,7 +8,6 @@ class CatIndex extends Component {
     id: this.props.breed.id,
     breed: this.props.breed.name
   }
-
 }
   render(){
     let {id, breed} = this.state

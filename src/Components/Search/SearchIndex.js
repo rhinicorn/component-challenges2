@@ -1,21 +1,60 @@
-import React from 'react';
-import {Input} from 'reactstrap';
- 
-const SearchIndex extends Component() {
-   this.state = {
-     things: ['pen', 'marker', 'eraser', 'notebook', 'pencil', 'scissors', 'highlighter', 'stapler', 'paper clip', 'binder', 'hole punch', 'laminator', 'laminating sheets', 'protective sheets', 'index cards']
-   }
- }
+import React, { Component , useState} from 'react';
+import { ReactDOM } from 'react-dom';
 
- function searchFunction() {
- }
+const things = [
+  'pen', 
+  'marker', 
+  'eraser',
+  'notebook', 
+  'pencil', 
+  'scissors', 
+  'highlighter', 
+  'stapler', 
+  'paper clip',
+  'binder',
+  'hole punch',
+  'laminator',
+  'laminating sheets',
+  'protective sheets',
+  'index cards'
+];
 
- render() {
-     <div>
-       <Input placeholder='Search Here' />
-       <h3>Results:</h3>
-     </div>
- }
+function SearchIndex() {
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  const handleSearch = (event) => {
+      const term = event.target.value
+      setSearchTerm(term);
+  };
+  React.useEffect(() => {
+      const newSearch = things.filter(value =>
+          value.toLowerCase().includes(searchTerm)
+          );
+          setSearchResults(newSearch);
+      }, [searchTerm]
+  );
 
- 
-export SearchIndex;
+
+  return(
+    <div>
+        <div>
+            <input 
+              type="text"
+              placeholder= "Enter a search term..." 
+              value={searchTerm}
+              onChange={handleSearch}
+            />
+        </div>
+        <div>
+            {searchResults.map(item => {
+                return (
+                  <div>{item}</div>
+                );
+            })}
+        </div>      
+    </div>
+  );
+
+}
+export default SearchIndex;
