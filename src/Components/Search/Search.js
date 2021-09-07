@@ -23,6 +23,7 @@ const Search = () => {
        </ul>
        <hr />
        <div>
+         <h4>Enter a search term to filter the list</h4>
         { <SearchIndex /> }
        </div>
      </Container>
