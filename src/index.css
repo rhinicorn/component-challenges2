@@ -34,3 +34,7 @@ li {
 ul {
   list-style-type: none;
 }
+
+.strike {
+  text-decoration: line-through;
+}
